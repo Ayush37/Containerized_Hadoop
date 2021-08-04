@@ -1,5 +1,5 @@
 
-Source https://github.com/big-data-europe/docker-hadoop
+bits borrowed from  big-data-europe/Hadoop
 
 # Changes
 
