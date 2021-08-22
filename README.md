@@ -2,7 +2,7 @@
 bits borrowed from  big-data-europe/Hadoop
 
 
-# Hadoop Docker
+# Hadoop sample Dockerized container
 
 ## Supported Hadoop Versions
 See repository branches for supported hadoop versions
@@ -19,10 +19,6 @@ Run example wordcount job:
   make wordcount
 ```
 
-Or deploy in swarm:
-```
-docker stack deploy -c docker-compose-v3.yml hadoop
-```
 
 `docker-compose` creates a docker network that can be found by running `docker network list`, e.g. `dockerhadoop_default`.
 
@@ -35,6 +31,8 @@ Run `docker network inspect` on the network (e.g. `dockerhadoop_default`) to fin
 * Resource manager: http://<dockerhadoop_IP_address>:8088/
 
 ## Configure Environment Variables
+
+This step is to configure env varialbe that are required for MR processing
 
 The configuration parameters can be specified in the hadoop.env file or as environmental variables for specific services (e.g. namenode, datanode etc.):
 ```
